@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DelishDiner</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+    <link rel="icon" type="image/png" href="./images/favicon2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- navbar start-->
+    <nav>
+
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#recipes" onclick="showPager ('recipes'); showdata()">Recipes</a></li>
+            <li><a href="#products" onclick="showPages ('products'); fetchProducts()">Products</a></li>
+            <li><a href="#team" onclick="showPage('team'); getTeam();">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+    <!--navbar end -->
+
+    <!--home section-->
+
+    <section class="main" id="home">
+        <div class="main-text">
+            <h1>Get Fresh <span>Food</span> in a Easy Way</h1>
+            <h1> </h1><br>
+            <p>Welcome to <b><i>Delish Diner</i></b>, where great food meets a cozy ambiance! Whether you're craving
+                classic
+                comfort dishes, sizzling specials, or delightful desserts, we’ve got something to satisfy every
+                appetite. Our chefs use only the freshest ingredients to craft mouthwatering meals, served with a
+                side of warm hospitality. </p><br>
+
+            <button>Order Now</button>
+        </div>
+
+        <div class="main-image">
+            <img src="images/food1.png">
+        </div>
+    </section>
+
+
+    <!--about section start-->
+    <div class="about" id="about">
+
+        <div class="header">
+            <h1><span>About</span> Us</h1>
+        </div>
+
+        <div class="about-main">
+
+            <div class="image">
+                <img src="./images/about2.jpg">
+            </div>
+
+            <div class="about-text">
+
+                <h3>Why Choose us?</h3>
+                <p>
+                    At Delish Diner, we believe that great food brings people together. Our journey started with a
+                    passion for creating delicious, home-style meals that satisfy both the heart and the taste buds.
+                </p><br>
+                <p>From classic comfort food to chef-inspired specialties, every dish is made with fresh ingredients
+                    and a touch of love. Whether you're stopping by for a hearty breakfast, a leisurely lunch, or a cozy
+                    dinner, we’re here to serve you with warm hospitality and a welcoming atmosphere. Join us for a
+                    dining experience that feels just like home!
+                </p>
+            </div>
+
+        </div>
+
+        <a href="#" class="about_btn">More</a>
+
+    </div>
+    <!--about section end-->
+
+
+    <!--recipies section-->
+
+    <div class="recipes" id="recipes">
+
+        <div class="recipes-head">
+            <h1>Our <span>Recipes</span> </h1>
+        </div>
+        <div class="division">
+            <div class="show-items" id="show-items"></div>
+        </div>
+
+    </div>
+    <!-- recipe section end-->
+
+
+    <!--Order-->
+
+    <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+
+        <div class="order_main">
+
+            <div class="order_image">
+                <img src="./images/order1.png">
+            </div>
+
+            <form action="">
+
+                <div class="input"><br>
+                    <p>Name</p>
+                    <input type="text" placeholder="Your name">
+                </div>
+
+                <div class="input"><br>
+                    <p>Email</p>
+                    <input type="email" placeholder="Your email">
+                </div>
+
+                <div class="input"><br>
+                    <p>Number</p>
+                    <input placeholder="Your number">
+                </div>
+
+                <div class="input"><br>
+                    <p>How Much</p>
+                    <input type="number" placeholder="How Many Order">
+                </div>
+
+                <div class="input"><br>
+                    <p>You Order</p>
+                    <input placeholder="Food Name">
+                </div>
+
+                <div class="input"><br>
+                    <p>Address</p>
+                    <input placeholder="Your Address">
+                </div>
+
+                <a href="#" class="about_btn">Order Now</a>
+
+            </form>
+
+        </div>
+
+    </div>
+    <!--order end-->
+
+
+    <!--product section start-->
+    <div class="products" id="products">
+
+        <div class="products-head">
+            <h1><span>Products</span></h1>
+        </div>
+
+        <div class="menu-section">           
+
+            <div id="category-buttons"></div>
+            <div id="product-list"></div>
+
+            <div class="scnd" id="scnd">
+                <a href="#catgry" onclick="catogery()">Catogery</a>
+            </div>
+            <div id="catgry-buttons"> </div>
+            <div id="catgry-list"> </div>
+
+        </div>
+    </div>
+    <!--products section end-->
+
+    <!--team section start-->
+    <div class="team" id="team">
+
+        <div class="team-head">
+            <h1>Our <span>Team</span></h1>
+        </div>
+
+        <div class="team-division">
+            <div class="team-left" id="team-div"></div>
+
+            <div class="team-ads">
+                <video width="320" height="240" autoplay muted>
+                    <source src="./images/foodvideo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+    </div>
+    <!--team section end-->
+
+
+    <!--contact section-->
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="black-box">
+                <h1>Get in Touch</h1>
+                <div class="contact-form">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <input type="text" placeholder="Subject">
+                    <textarea placeholder="Your Message" rows="5"></textarea>
+                    <button type="submit">Send Message</button>
+                </div>
+            </div>
+
+
+            <div class="gray-box">
+                <h1>Contact Us</h1>
+                <p><i class="fas fa-map-marker-alt"></i> 23, Avenue de Paris, 75012 Paris</p>
+                <p><i class="fas fa-phone-alt"></i> +33 619 530 144</p>
+                <p><i class="fas fa-envelope"></i> contact@delishdiner.com</p>
+                <p><i class="fas fa-clock"></i> Mon - sunday: 9 AM - 11 PM</p>
+                <p><i class="fas fa-globe"></i> <a href="#" class="site">www.delishdiner.com</a></p>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--contact section end-->
+
+
+    
+    <!--footer section start-->
+    <footer class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#">India</a>
+                <a href="#">Japan</a>
+                <a href="#">Paris</a>
+                <a href="#">Russia</a>
+                <a href="#" class="last">France</a>
+            </div>
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Recipes</a>
+                <a href="#">Products</a>
+                <a href="#" class="last">Team</a>
+
+            </div>
+
+            <div class="box">
+                <h3>Help</h3>
+                <a href="#">Delivery</a>
+                <a href="#">Returns</a>
+                <a href="#">Secure Payments</a>
+                <a href="#">Track an Order</a>
+                <a href="#" class="last">Contact Us</a>
+
+            </div>
+
+            <div class="box-2">
+
+                <div class="logo-footer">
+                    <img src="images/logo.png" alt="">
+                </div>
+
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+        </div>
+
+        <div class="credit"> copyright@2025 by <span><i> Mr Web Designer </i></span></div>
+
+    </footer>
+
+
+</body>
+
+</html>

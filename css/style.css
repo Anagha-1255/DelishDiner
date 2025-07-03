@@ -262,7 +262,7 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 20px;
     text-align: center;
-    width: 350px;
+    width: 250px;
     height: auto;
     transition: transform 0.3s ease;
 }

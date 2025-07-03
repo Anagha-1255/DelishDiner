@@ -23,7 +23,7 @@ function showdata() {
             img_data.src = myObj.recipes[i].image;
             name_data.innerHTML = myObj.recipes[i].name;
             // instruction_data.innerHTML = myObj.recipes[i].instructions;
-            prep_time.innerHTML = myObj.recipes[i].prepTimeMinutes;
+            prep_time.innerHTML ="Prep Time: " + myObj.recipes[i].prepTimeMinutes + " minutes";
 
             divbox.appendChild(img_data);
             divbox.appendChild(name_data);

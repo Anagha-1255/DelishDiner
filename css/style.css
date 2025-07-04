@@ -501,20 +501,19 @@ nav ul li a:hover {
 /*team section*/
 
 .team {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #effdee;
-    overflow: auto;
-    padding-top: 50px;    
+    background-color: #effdee;   
+    padding-bottom: 10px;       
 }
 .team-head {    
     width: 100%;
-    font-size: 30px;
-    position: relative;  
-    color: #434343; 
+     height: 10vh;
+    font-size: 30px;    
+    color: #434343;     
 }
 .team-head span {
     color: #26874e;
@@ -526,20 +525,24 @@ nav ul li a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;   
-    padding-top: 30px;
-    overflow: auto;    
+    padding-top: 50px;    
+     height: 90vh;   
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .team-ads {
-    width: 40%;
+    width: 35%;
     height: 90vh;   
 }
 .team-ads video {
-    width: 550px;
+    width: 650px;
     height: 80vh;
-    align-items: center;  
+    align-items: center;    
+    margin-top: 35px;
 }
 .team-left {
-    width: 70%;    
+    width: 70%; 
+    height: 90vh;   
     overflow: auto;
 }
 .team-left::-webkit-scrollbar{
@@ -549,7 +552,8 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;   
+    gap: 40px;    
+    padding: 20px;  
 }
 .user-div-style {
     display: flex;
@@ -561,9 +565,7 @@ nav ul li a:hover {
     background: white;
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
-    height: 230px;
-    
+    transition: transform 0.3s ease-in-out;       
 }
 .user-div-style:hover {
     transform: translateY(-8px);
@@ -571,24 +573,23 @@ nav ul li a:hover {
 .user-div-style img {
     width: 90px;
     height: 90px;
-    border-radius: 10%;
+    border-radius: 20%;
     object-fit: cover;
     border: 2px solid #666;
 }
 .user-div-deat {
-    text-align: center;  
+    text-align: center; 
+   padding-top: 15px; 
 }
 .user-div-deat h3 {
     color: #26874e;
-    font-size: 22px;  
-    padding-top: 20px;
-    padding-bottom: 10px;
+    font-size: 22px;   
 }
 .user-div-deat h4 {
     color: #666;
     font-size: 14px;   
-    text-transform: capitalize;
-    line-height: 25px;
+    text-transform: capitalize;    
+    padding: 4px 0;    
 }
 @media (max-width: 768px) {
     .user-div-style {
